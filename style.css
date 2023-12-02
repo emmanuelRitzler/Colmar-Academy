@@ -66,15 +66,17 @@ header p {
 }
 
 .banner-hero img {
-    display: inline;
+    display: grid;
+    grid-column-start: 1;
     width: 60%;
     height: auto;
+    margin-right: 24px;
 }
 
 .banner-text {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(4, 1fr);
     gap: 20px 0px;
 }
 
@@ -83,6 +85,7 @@ header p {
     grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    font-size: 1.6rem;
 }
 
 .banner-text p {
@@ -93,14 +96,16 @@ header p {
 }
 
 .banner-text a {
+    height: 32px;
+    width: 100%;
     display: grid;
+    align-items: center;
     grid-column-start: 2;
+    grid-column-end: 2;
     grid-row-start: 4;
     grid-row-end: 5;
-    width: 40%;
-    height: auto;
     text-decoration: none;
-    padding: 10px 20px;
+    text-align: center;
     background-color: rgb(69, 69, 69);
     color: rgb(213, 213, 213);
 }
