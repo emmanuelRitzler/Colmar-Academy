@@ -3,6 +3,7 @@
     padding: 0 0;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 /* HEADER */
@@ -63,49 +64,83 @@ header p {
     height: auto;
     background-color: rgb(160, 160, 160);
     padding: 32px 24px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: repeat(5, 100px);
+    column-gap: 24px;
 }
 
 .banner-hero img {
-    display: grid;
-    grid-column-start: 1;
-    width: 60%;
-    height: auto;
-    margin-right: 24px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / 6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.banner-text {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 20px 0px;
-}
-
-.banner-text h1 {
-    display: grid;
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
+.banner-hero h1 {
+    grid-column: 2 / 2;
+    grid-row: 2 / span 1;
     font-size: 1.6rem;
 }
 
-.banner-text p {
-    display: grid;
-    grid-column-start: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
+.banner-hero p {
+    grid-column: 2 / 2;
+    grid-row: 3 / span 1;
 }
 
-.banner-text a {
+.banner-hero a {
+    grid-column: 2 / 2;
+    grid-row: 4 / span 1;
     height: 32px;
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    width: 50%;
     text-decoration: none;
     text-align: center;
     background-color: rgb(69, 69, 69);
     color: rgb(213, 213, 213);
+}
+
+@media only screen and (max-width: 425px) {
+    .banner-hero {
+        width: 100%;
+        height: auto;
+        background-color: rgb(160, 160, 160);
+        padding: 0px 16px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .banner-hero img {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .banner-hero h1 {
+        grid-column: 1 / 1;
+        grid-row: 3 / span 1;
+        font-size: 1.6rem;
+    }
+
+    .banner-hero p {
+        grid-column: 1 / 1;
+        grid-row: 4 / span 1;
+    }
+
+    .banner-hero a {
+        grid-column: 1 / 1;
+        grid-row: 5 / span 1;
+        height: 32px;
+        width: 100%;
+        text-decoration: none;
+        text-align: center;
+        background-color: rgb(69, 69, 69);
+        color: rgb(213, 213, 213);
+        margin: 24px 32px;
+    }
 }
