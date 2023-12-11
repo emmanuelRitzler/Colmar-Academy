@@ -198,6 +198,7 @@ header p {
     grid-row: 2 / span 1;
     max-width: 100%;
     font-size: 1.2vw;
+    font-weight: 300;
 }
 
 .event-text a {
