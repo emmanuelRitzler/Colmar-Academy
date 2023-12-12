@@ -19,7 +19,7 @@ header {
 
 header img {
     padding-left: 24px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -57,6 +57,21 @@ header p {
     font-size: 2rem;
 }
 
+@media only screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .desktop {
+        display: none;
+    }
+    .logo {
+        display: none;
+    }
+}
+
 /* BANNER */
 
 .banner {
@@ -72,7 +87,7 @@ header p {
 
 .banner-image img {
     height: auto;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -124,7 +139,7 @@ header p {
 
 .event-left img {
     height: auto;
-    width: 100%;
+    max-width: 100%;
     padding-right: 24px;
     padding-top: 32px;
 }
@@ -142,13 +157,13 @@ header p {
 }
 
 .event-left p {
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     max-width: 92%;
     font-weight: 300;
 }
 
 #author {
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     max-width: 100%;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -161,6 +176,11 @@ header p {
     grid-template-rows: auto;
 }
 
+.event-right a {
+    font-size: 1.6vw;
+    max-width: 100%;
+}
+
 .orientation-date {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
@@ -171,7 +191,7 @@ header p {
 }
 
 .orientation-date img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     grid-column: 1 / span 1;
@@ -197,7 +217,7 @@ header p {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     max-width: 100%;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     font-weight: 300;
 }
 
@@ -215,7 +235,7 @@ header p {
 }
 
 .our-campus img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     grid-column: 1 / span 1;
@@ -231,7 +251,7 @@ header p {
 }
 
 .our-guest-lecture img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     grid-column: 1 / span 1;
@@ -281,7 +301,7 @@ header p {
 .start-learning-grid p {
     padding: 0px 0px 24px 16px;
     font-weight: 300;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     max-width: 100%;
 }
 
@@ -320,7 +340,7 @@ header p {
 
 .computer-art-image img {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     grid-template-columns: 1 / span 1;
     grid-template-rows: 1 / span 1;
@@ -344,7 +364,7 @@ header p {
 
 .design-image img {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     grid-template-columns: 1 / span 1;
     grid-template-rows: 1 / span 1;
@@ -368,7 +388,7 @@ header p {
 
 .data-image img {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     grid-template-columns: 1 / span 1;
     grid-template-rows: 1 / span 1;
@@ -392,7 +412,7 @@ header p {
 
 .business-image img {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     grid-template-columns: 1 / span 1;
     grid-template-rows: 1 / span 1;
@@ -416,7 +436,7 @@ header p {
 
 .marketing-image img {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
     grid-template-columns: 1 / span 1;
     grid-template-rows: 1 / span 1;
@@ -480,14 +500,15 @@ header p {
 
 .text-part h3 {
     padding: 24px 0px 8px 0px;
-    font-size: 1.8vw;
+    font-size: 2vw;
     max-width: 100%;
 }
 
 .text-part p {
     font-weight: 300;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     max-width: 100%;
+    margin-bottom: 32px;
 }
 
 .events-exhibit {
@@ -511,7 +532,7 @@ header p {
 }
 
 .event_1_image img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     grid-column: 1 / span 1;
@@ -525,14 +546,14 @@ header p {
 
 .event_1_text p {
     width: 100%;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     max-width: 100%;
     align-self: flex-start;
     font-weight: 300;
 }
 
 .event_1_text h3 {
-    font-size: 1.8vw;
+    font-size: 2vw;
     max-width: 100%;
     align-self: flex-end;
     padding-bottom: 10px;
@@ -549,7 +570,7 @@ header p {
 }
 
 .event_2_image img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     grid-column: 1 / span 1;
@@ -563,14 +584,14 @@ header p {
 
 .event_2_text p {
     width: 100%;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     max-width: 100%;
     align-self: flex-start;
     font-weight: 300;
 }
 
 .event_2_text h3 {
-    font-size: 1.8vw;
+    font-size: 2vw;
     max-width: 100%;
     align-self: flex-end;
     padding-bottom: 10px;
@@ -580,6 +601,7 @@ header p {
 
 footer {
     width: 100%;
+    margin-top: 32px;
     height: auto;
     display: flex;
     justify-content: space-between;
